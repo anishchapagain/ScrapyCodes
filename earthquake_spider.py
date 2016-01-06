@@ -5,6 +5,7 @@ from earthquake.items import EarthquakeItem
 #Nepal EarthQuake (Gorkha Apr-Dec 2015) and its Aftershocks.
 #Data Scraped form http://www.seismonepal.gov.np
 #anishchapagain@gmail.com
+
 class EarthquakeSpiderSpider(scrapy.Spider):
     name = "earthquake_spider"
     allowed_domains = ["seismonepal.gov.np"]
