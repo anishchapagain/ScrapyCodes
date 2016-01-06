@@ -11,7 +11,7 @@ class EarthquakeSpiderSpider(scrapy.Spider):
 
 	#Paging estimation for Roughly 5 Pages.
 	#POST: {year:2015}
-    start_urls = ['http://www.seismonepal.gov.np/index.php?action=earthquakes&show=past&year=2015&page=%s' % page for page in xrange(1,6)]
+    start_urls = ['http://www.seismonepal.gov.np/index.php?action=earthquakes&show=recent&page=%s' % page for page in xrange(1,6)]
      
     def parse(self, response):
         print("Response Type >>> ",type(response)) #('Type >>> ', <class 'scrapy.http.response.html.HtmlResponse'>)

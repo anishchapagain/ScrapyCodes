@@ -6,12 +6,15 @@ from earthquake.items import EarthquakeItem
 #Data Scraped from http://www.seismonepal.gov.np
 #anishchapagain@gmail.com
 
-class EarthquakeSpiderSpider(scrapy.Spider)
+class EarthquakeSpiderSpider(scrapy.Spider):
     name = "earthquake_spider"
     allowed_domains = ["seismonepal.gov.np"]
 
-#Paging estimation for Roughly 5 Pages.
-#POST: {year:2015}
+	#1 Aftershocks 'def start_requests to be OFF'
+	#start_urls = ['http://www.seismonepal.gov.np/index.php?action=earthquakes&show=recent&page=%s' % page for page in xrange(1,6)]
+	
+    #2 Paging estimation for Roughly 5 Pages.
+    #POST: {year:2015}
     def start_requests(self):
         for page in xrange(1,6):
             url='http://www.seismonepal.gov.np/index.php?action=earthquakes&show=past&page=%s' % page
