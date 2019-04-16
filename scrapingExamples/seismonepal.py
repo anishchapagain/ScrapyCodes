@@ -10,7 +10,8 @@ BASE_URL = "http://www.seismonepal.gov.np"
 
 def read_url(url):
     """ Read given Url , Returns pq() of page"""
-    html = urlopen(url).read()
+    # html = urlopen(url).read()
+    html = requests.get(url).content
     return pq(html)
 
 
