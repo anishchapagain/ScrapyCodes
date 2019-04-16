@@ -22,7 +22,7 @@ class BlogSpider(scrapy.Spider):
     start_urls = ['http://blog.scrapinghub.com/tag/web-scraping/page/%s' % page for page in xrange(1, 4)]
     '''
 
-    '''Using XPath'''
+    ''' Using XPath '''
     def parse(self, response):
         print("Response Type >>> ", type(response))
         rows = response.xpath("//div[@class='post-listing']//div[@class='post-item']")
