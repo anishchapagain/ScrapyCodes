@@ -1,6 +1,7 @@
 '''
 Listing Blog for first 50 or less
 from 'https://blog.scrapinghub.com/tag/web-scraping'
+
 '''
 import scrapy
 from Blog.items import BlogItem
@@ -11,7 +12,7 @@ class BlogSpider(scrapy.Spider):
     allowed_domains = ["blog.scrapinghub.com"]
     start_urls = ('http://blog.scrapinghub.com/tag/web-scraping',) #Main Page
     '''
-    To be used for pagination purpose
+    To be used for pagination purpose.
     
     start_urls = (
         'http://blog.scrapinghub.com/tag/web-scraping',
